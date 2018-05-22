@@ -1,0 +1,71 @@
+#view th.check {
+    width: 3%;
+}
+
+#view th.question {
+    width: 29%;
+}
+
+#view th.answer {
+    width: 29%;
+}
+
+#view th.response {
+    width: 29%;
+}
+
+#view th.result {
+    width: 6%;
+}
+
+#workspace-list {
+    width: 100%;
+    max-height: 14em;
+    margin-bottom: 14px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+#workspace-list .container {
+    box-sizing: border-box;
+    height: 20px;
+    border: transparent solid 1px;
+    margin: 0;
+    cursor: pointer;
+}
+
+#workspace-list .container.active,
+#workspace-list .container:hover {
+    border-color: #22a2c6;
+    background-color: rgba(44, 209, 255, 0.09);
+}
+
+#workspace-list .content {
+    padding: 3px 5px;
+    text-align: left;
+    word-break: break-all;
+}
+
+#workspace-list .content.remove {
+    width: 7%;
+    background: url(../../images/common/delete.svg) center center no-repeat;
+    background-size: contain;
+    border: transparent solid 3px;
+}
+
+#workspace-list .content.remove:hover {
+    opacity: 0.4;
+}
+
+#workspace-create input.error {
+    border: #ff0000 solid 2.5px;
+    outline: 0;
+}
+
+.modalBox .modalButton {
+    text-align: center;
+}
+
+.modalBox .modalButton button {
+    width: 100%;
+}

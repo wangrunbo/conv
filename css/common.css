@@ -1,0 +1,236 @@
+body, input, select, textarea {
+    font-size: 17px;
+}
+
+#main {
+    padding: 2px 40px;
+}
+
+button, .button {
+    cursor: pointer;
+    min-width: 58px;
+    height: 31px;
+    font-size: 14px;
+    padding: 3px 9px;
+    color: #ffffff;
+    background-color: #4998c7;
+    border: #4998c7 solid 2px;
+    box-sizing: border-box;
+}
+
+button.error {
+    background-color: red !important;
+}
+
+button.disabled {
+    background-color: #b4b4b4 !important;
+    cursor: not-allowed;
+    border-color: #b4b4b4;
+}
+
+.cancel {
+    background-color: #fefefe;
+    color: #5b9bd5;
+}
+
+input {
+    padding: 0 4px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#view {
+    margin: 10px 0;
+}
+
+#view .buttonContainer button,
+#view .buttonContainer .button {
+    margin-right: 5px;
+}
+
+#view .buttonContainer .flag {
+    float: right;
+}
+
+#view .buttonContainer .flag button,
+#view .buttonContainer .flag .button {
+    margin-left: 5px;
+    margin-right: 0;
+    background-color: transparent;
+    color: unset;
+    border: #c6c6c6 solid 1px;
+    min-width: 123px;
+}
+
+#view table {
+    border-collapse: collapse;
+    font-size: 12px;
+    text-align: left;
+    width: 100%;
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+#view table tr:nth-child(2n) {
+    background-color: #e2e2e2;
+}
+
+#view th,
+#view td {
+    border: #c6c6c6 solid 1px;
+}
+
+#view th {
+    text-align: left;
+    padding-left: 5px;
+    background-color: #d9d9d9;
+}
+
+#view table td {
+    padding: 5px;
+}
+
+#view th.center,
+#view td.center {
+    text-align: center;
+    padding: 0;
+}
+
+.result-ok, .result-ng {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: center center no-repeat;
+    background-size: contain;
+    text-indent: -9999px;
+}
+
+.result-ok {
+    background-image: url(../images/common/ok.png);
+}
+
+.result-ng {
+    background-image: url(../images/common/ng.png);
+}
+
+#loader {
+    border: 2px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 2px solid #000000;
+    width: 20px;
+    height: 20px;
+    animation: spin 0.8s linear infinite;
+    margin: 10px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.caution {
+    color: #ff0000;
+    font-size: 13px
+}
+
+/* @group .formContainer */
+.container {
+    display: table;
+    width: 100%;
+    height: 30px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.container:last-child {
+    margin-bottom: 0;
+}
+
+.container .label {
+    display: table-cell;
+    font-weight: bold;
+    width: 25%;
+    vertical-align: middle;
+}
+
+.container .content {
+    display: table-cell;
+}
+
+.container .content input {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+/* @end */
+
+/* @group .modal */
+body.modalOpen {
+    overflow: hidden;
+}
+
+.modal {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(216, 216, 216, 0.8);
+    display: none;
+}
+
+.modalBox {
+    position: relative;
+    width: 44%;
+    margin: 0 auto;
+    margin-top: 88px;
+    padding: 20px;
+    padding-top: 64px;
+    background-color: #ffffff;
+    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+.modalBox .closeButton {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+button.close {
+    width: 40px;
+    height: 40px;
+    min-width: unset;
+    background: url(../images/common/bg-close.png) center center no-repeat #4998c7;
+    border-width: 7px;
+    text-indent: -9999px;
+}
+
+.modalBox .modalButton {
+    display: table;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.modalBox .modalButton button,
+.modalBox .modalButton .button {
+    display: table-cell;
+    width: 45%;
+    height: 36px;
+    font-size: 19px;
+}
+
+.modalBox .modalButton button:nth-child(2),
+.modalBox .modalButton .button:nth-child(2) {
+    float: right;
+}
+
+.modalBox hr {
+    margin: 20px 0;
+}
+/* @end */

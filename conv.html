@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Watson Assistant結果検証</title>
+    <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/conv/style.css" />
+
+    <script src="js/conv/excelexport.js"></script>
+    <script src="js/conv/jquery.cookie.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/conv/conv.js"></script>
+</head>
+
+<body>
+<div id="main">
+    <div><h1>Watson Assistant結果検証</h1></div>
+
+    <div id="view">
+        <div class="buttonContainer">
+            <button id="exec_btn" class="disabled" type="button" disabled="disabled">実行</button>
+            <button id="xls_btn" type="button">ダウンロード</button>
+
+            <div class="flag">
+                <button id="workspaceBtn" type="button">Workspace選択</button>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+            <tr>
+                <th class="check"><input id="check-all" type="checkbox" title="全部" onchange="check_all(this);" /></th>
+                <th class="count">No</th>
+                <th class="question">Question</th>
+                <th class="answer">Answer</th>
+                <th class="response">Response</th>
+                <th class="result center">Result</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            </tbody>
+        </table>
+
+        <div class="buttonContainer">
+            <label>
+                <input id="xls" type="file" name="xls" title="xls" />
+                <span id="read_btn" class="button">Excelファイルを読む</span>
+            </label>
+            <p class="caution">
+                注意：<br />
+                ① データのシート名を「Sheet1」にしてください。<br />
+                ② データを「No、Question、Answer」の順番でください。
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="modal">
+    <div class="modalBox">
+        <div class="closeButton">
+            <button class="close" type="button">キャンセル</button>
+        </div>
+
+        <div class="modalContent">
+            <div id="workspace-list">
+
+            </div>
+
+            <hr />
+
+            <div id="workspace-create">
+                <div class="container">
+                    <div class="label">Name</div>
+                    <div class="content">
+                        <input name="name" type="text" placeholder="Name" />
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="label">Workspace ID</div>
+                    <div class="content">
+                        <input name="workspace_id" type="text" placeholder="Workspace ID" />
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="label">Username</div>
+                    <div class="content">
+                        <input name="username" type="text" placeholder="Username" />
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="label">Password</div>
+                    <div class="content">
+                        <input name="password" type="password" placeholder="Password" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modalButton">
+            <button id="newWorkspaceBtn" type="button">追加</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
